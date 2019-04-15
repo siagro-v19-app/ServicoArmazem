@@ -4,7 +4,7 @@
 	<SelectDialog
 		title="Produtos"
 		class="sapUiPopupWithPadding sapUiSizyCompact"
-		items="{path: '/Produtos'}"
+		items="{path: '/Produtos', sorter: {path: 'Descricao'}}"
 		search="_handleValueHelpSearch"
 		confirm="_handleValueHelpClose"
 		cancel="_handleValueHelpClose">
@@ -12,6 +12,6 @@
 			iconDensityAware="false"
 			iconInset="false"
 			title="{Descricao}"
-			description="{Id}" />
+			description="{Id}"/>
 	</SelectDialog>
 </core:FragmentDefinition>
