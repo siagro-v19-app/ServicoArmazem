@@ -11,15 +11,6 @@
 			<Page showHeader="false" class="sapUiContentPadding" enableScrolling="false">
 				<content>
 					<t:Table id="tableServico"
-						rows="{
-							path: '/ServicoArmazems',
-							sorter: {
-								path: 'Descricao'
-							},
-							parameters: {
-								expand: 'ProdutoDetails'
-							}
-						}"
 						selectionMode="Single"
 						selectionBehavior="Row"
 						class="sapUiSizeCondensed"
@@ -30,7 +21,7 @@
 							<Toolbar>
 								<Title text="Lista de Serviços"/>
 								<ToolbarSpacer/>
-								<SearchField placeholder="Pesquisar serviço..." width="30%" search="filtraServico"/>
+								<SearchField placeholder="Pesquisar descrição..." width="30%" search="filtraServico"/>
 							</Toolbar>
 						</t:toolbar>
 						<t:columns>

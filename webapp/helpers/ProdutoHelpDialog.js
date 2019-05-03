@@ -10,8 +10,6 @@ sap.ui.define([
 			this._oView = oView;
 			this._inputId = sInputId;
 			
-			oController.getOwnerComponent().getModel().refresh(true);
-			
 			var sFrag = "br.com.idxtecServicoArmazem.helpers.ProdutoHelpDialog"; 
 			if (!this._valueHelpDialog) {
 				this._valueHelpDialog = sap.ui.xmlfragment(sFrag,this);
@@ -35,7 +33,9 @@ sap.ui.define([
 			var oSelectedItem = evt.getParameter("selectedItem");
 			if (oSelectedItem) {
 				var oInput = sap.ui.getCore().byId(this._inputId); 
-				var sId = oSelectedItem.getDescription();
+				var oCells = oSelectedItem.getCells();
+				
+				var sId = oCells[0].getNumber();
 
 				oInput.setSelectedKey(sId);
 			}
